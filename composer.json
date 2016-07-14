@@ -10,13 +10,27 @@
     ],
     "autoload": {
         "psr-4": {
-            "JasonMichels\\SchedulerApi\\": "src/"
+            "JasonMichels\\SchedulerApi\\": "src/",
+            "JasonMichels\\SchedulerApi\\Tests\\": "tests"
         }
     },
     "require": {
+        "php": ">=7.0",
         "equip/framework": "^2.0",
         "josegonzalez/dotenv": "^2.0",
         "monolog/monolog": "^1.19",
         "zendframework/zend-diactoros": "^1.0.4"
+    },
+    "require-dev": {
+        "phpmetrics/phpmetrics": "^1.10",
+        "fzaninotto/faker": "^1.6",
+        "phpunit/phpunit": "^5.4",
+        "phpspec/phpspec": "^2.5",
+        "phing/phing": "^2.14",
+        "mockery/mockery": "^0.9.5",
+        "squizlabs/php_codesniffer": "^2.6",
+        "sebastian/phpcpd": "^2.0",
+        "phpmd/phpmd": "^2.4",
+        "sebastian/phpdcd": "^1.0"
     }
 }

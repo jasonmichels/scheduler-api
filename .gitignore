@@ -1,4 +1,11 @@
+.DS_Store
+Thumbs.db
 composer.phar
 composer.lock
 /vendor/
 .idea
+.env
+/public/.htaccess
+build.properties
+docker-compose.yml
+/build

@@ -1,0 +1,31 @@
+proxy:
+  image: dockercloud/haproxy:1.5.1
+  ports:
+    - "9000:80"
+  links:
+    - web
+web:
+  build: .
+  volumes:
+    - .:/var/www/html:rw
+  links:
+    - mysql:mysql
+  environment:
+    - APP_ENV=local
+    - APP_DEBUG=true
+    - APP_KEY=
+    - APP_URL=http://docker.local
+    - DB_CONNECTION=mysql
+    - DB_HOST=mysql
+    - DB_DATABASE=scheduler_api_dev
+    - DB_USERNAME=scheduler_api_dev
+    - DB_PASSWORD=scheduler_api_dev
+    - BUGSNAG_API_KEY=yourbugsnagkey
+mysql:
+  image: tutum/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_PASS=scheduler_api_dev
+    - MYSQL_USER=scheduler_api_dev
+    - ON_CREATE_DB=scheduler_api_dev
