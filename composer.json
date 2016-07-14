@@ -1,0 +1,22 @@
+{
+    "name": "jasonmichels/scheduler-api",
+    "description": "A sample project using equip",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Michels"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JasonMichels\\SchedulerApi\\": "src/"
+        }
+    },
+    "require": {
+        "equip/framework": "^2.0",
+        "josegonzalez/dotenv": "^2.0",
+        "monolog/monolog": "^1.19",
+        "zendframework/zend-diactoros": "^1.0.4"
+    }
+}
